@@ -1,0 +1,11 @@
+server:
+  port: ${PORT:5000}
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: ${DEFAULT_ZONE:http://localhost}

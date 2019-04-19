@@ -1,0 +1,28 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI}
+  instance:
+    hostname: ${HOSTNAME}
+    nonSecurePort: 80
+    healthcheck:
+      enabled: true
+spring:
+  application:
+    name: api
+    region: ${REGION}
+  cloud:
+    client:
+      hostname: ${HOSTNAME}
+  datasource:
+    url: ${DATABASE_URL}
+  jpa:
+    generate_ddl: true
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+
+app:
+  jwtSecret: ${JWT_SECRET}
+  jwtExpiration: 604800000
